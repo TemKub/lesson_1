@@ -1,0 +1,240 @@
+/*ГЛАВНЫЙ ЭКРАН*/
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 500px;
+    padding: 60px 8%;
+    background-color: white;
+}
+
+/*ЛЕВАЯ ЧАСТЬ*/
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #202020;
+    margin-bottom: 25px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/*КНОПКА*/
+
+.hero-text button {
+    background-color: #1687c9;
+    color: white;
+
+    border: none;
+    padding: 18px 35px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-text button:hover {
+    background-color: #086399;
+    transform: scale(1.05);
+}
+
+/*ПРАВАЯ ЧАСТЬ*/
+
+.hero-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+}
+
+/*БЛОК ПЕРСОНАЖЕЙ*/
+
+.legends {
+    background-color: #c5d82f;
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.legends h2 {
+    font-size: 36px;
+    color: #292929;
+    margin-bottom: 50px;
+}
+
+.legends-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.legends-list div {
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.legends-list div:hover {
+    transform: translateY(-10px);
+}
+
+.legends-list h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.legends-list p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ*/
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .legends-list {
+        flex-direction: column;
+    }
+}
+
+/*КАРТОЧКИ ПЕРСОНАЖЕЙ*/
+
+.legend-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    min-width: 180px;
+    flex: 1;
+}
+
+.legend-card button {
+    background-color: #292929;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.legend-card button:hover {
+    background-color: #1687c9;
+    transform: scale(1.05);
+}
+
+/*ВЫБРАННЫЙ ПЕРСОНАЖ*/
+
+.selected-legend {
+    background-color: #292929;
+    color: white;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 12px;
+    animation: appear 0.4s ease;
+}
+
+.selected-legend h2 {
+    color: #c5d82f;
+    margin-bottom: 15px;
+}
+
+.selected-legend p {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.legend-photo {
+    width: 160px;
+    height: 180px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.legend-card:hover .legend-photo {
+    transform: scale(1.1);
+}
+
+.selected-photo {
+    width: 250px;
+    height: 300px;
+    object-fit: contain;
+    animation: photoAppear 0.5s ease;
+}
+
+.selected-legend button {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 30px;
+    background-color: #c5d82f;
+    color: #202020;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.selected-legend button:hover {
+    transform: scale(1.05);
+    background-color: white;
+}
+
+@keyframes photoAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.hero-image {
+    transform: translateY(60px);
+}
