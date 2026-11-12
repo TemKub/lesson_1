@@ -9,25 +9,25 @@ function MainBlock() {
             name: "Billy Herrington",
             title: "THE ANIKI",
             phrase: "ANIKI!",
-            image: "/BILLY-HERRINGTON.png"
+            image: `${import.meta.env.BASE_URL}BILLY-HERRINGTON.png`
         },
         {
             name: "Van Darkholme",
             title: "THE MASTER",
             phrase: "300 BUCKS!",
-            image: "/VAN-DARKHOLME.png"
+            image: `${import.meta.env.BASE_URL}VAN-DARKHOLME.png`
         },
         {
             name: "Ricardo Milos",
             title: "THE DANCER",
             phrase: "IT'S TIME TO DANCE!",
-            image: "/RICARDO-MILOS.png"
+            image: `${import.meta.env.BASE_URL}RICARDO-MILOS.png`
         },
         {
             name: "Danny Lee",
             title: "THE LEGEND",
             phrase: "OH YEAH!",
-            image: "/DANNY-LEE.png"
+            image: `${import.meta.env.BASE_URL}DANNY-LEE.png`
         }
     ];
 
@@ -62,7 +62,8 @@ function MainBlock() {
                 </div>
 
                 <div className="hero-image">
-                    <img src="/Main-Billy.png" alt="Billy Herrington" />
+                    <img src={`${import.meta.env.BASE_URL}Main-Billy.png`}
+                         alt="Billy Herrington" />
                 </div>
             </section>
 
